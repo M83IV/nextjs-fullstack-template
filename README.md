@@ -1,36 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Next.js Fullstack Starter Template
 
-## Getting Started
+Plantilla profesional para iniciar proyectos **full‑stack modernos** con un stack real de producción, pensada para ahorrar tiempo y seguir buenas prácticas desde el día 1.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Características
+
+* ⚡ **Next.js (App Router)**
+* 🟦 **TypeScript**
+* 🎨 **Tailwind CSS** + `clsx` + `tailwind-merge`
+* 🧪 **Vitest** (unit tests)
+* 🎭 **Playwright** (E2E tests)
+* 🧹 **ESLint + Prettier** integrados
+* 📦 **pnpm** como gestor de paquetes
+* 🔧 Configuración lista para escalar
+
+---
+
+## 📁 Estructura del proyecto
+
+```txt
+my-app/
+├─ src/
+│  ├─ app/                # App Router (Next.js)
+│  ├─ lib/                # Utilidades compartidas
+│  └─ components/         # Componentes reutilizables
+│
+├─ tests/                 # Tests unitarios (Vitest)
+├─ playwright-tests/      # Tests end‑to‑end (Playwright)
+│
+├─ vitest.config.ts
+├─ vitest.setup.ts
+├─ playwright.config.ts
+├─ tailwind.config.ts
+├─ tsconfig.json
+├─ .eslintrc.json
+├─ .prettierrc
+└─ package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧪 Testing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Unit tests (Vitest)
 
-## Learn More
+```bash
+pnpm vitest
+```
 
-To learn more about Next.js, take a look at the following resources:
+Modo watch:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm vitest --watch
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### End‑to‑End tests (Playwright)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Ejecutar todos los tests:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm exec playwright test
+```
+
+Modo UI:
+
+```bash
+pnpm exec playwright test --ui
+```
+
+---
+
+## 🧹 Lint & Format
+
+### ESLint
+
+```bash
+pnpm lint
+```
+
+### Prettier
+
+Comprobar formato:
+
+```bash
+pnpm exec prettier --check .
+```
+
+Arreglar automáticamente:
+
+```bash
+pnpm exec prettier --write .
+```
+
+---
+
+## ▶️ Desarrollo
+
+```bash
+pnpm dev
+```
+
+Abrir en el navegador:
+
+```
+http://localhost:3000
+```
+
+---
+
+## 🧱 Filosofía del proyecto
+
+Este template está pensado para:
+
+* Proyectos reales (no solo demos)
+* Escalar sin rehacer configuración
+* Mantener código consistente
+* Facilitar testing desde el inicio
+
+Si tu proyecto no necesita tests o linting, puedes desactivarlos, pero **la base ya está lista**.
+
+---
+
+## 📌 Recomendaciones
+
+* Usa este repositorio como **Template** en GitHub
+* Mantén dependencias actualizadas conscientemente
+* Escribe tests desde el inicio
+
+---
+
+## 📄 Licencia
+
+MIT
+
+---
+
+Hecho para desarrollo moderno
