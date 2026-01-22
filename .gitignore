@@ -33,3 +33,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# pnpm
+.pnpm-debug.log*
+
+# Turbopack (por si algun dia se usa)
+.turbo
